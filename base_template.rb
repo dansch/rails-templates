@@ -16,7 +16,6 @@ END
 gem 'authlogic', :source => "http://gemcutter.org"
 gem 'compass-960-plugin', :lib => 'ninesixty', :source => "http://gemcutter.org"
 gem 'compass', :lib => 'compass', :source => "http://gemcutter.org"
-gem "coderay", :source => "http://gemcutter.org"
 gem 'formtastic', :source => "http://gemcutter.org"
 gem 'haml', :lib => 'haml', :version => '>=2.2.0', :source => "http://gemcutter.org"
 gem 'searchlogic', :source => "http://gemcutter.org"
@@ -32,8 +31,12 @@ gem "remarkable_rails", :lib => false
 gem "faker", :lib => false
 
 # scripts
-generate("rspec")
-generate("cucumber")
+generate "rspec"
+generate "cucumber"
+
+# authlogic authentication
+generate "session", "user_session"
+generate "rspec_scaffold", "user login:string"
 
 # rake tasks
 rake "db:migrate"
