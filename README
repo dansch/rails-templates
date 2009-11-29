@@ -1,0 +1,3 @@
+base template to generate new rails app with standard setup
+
+TODO move authentication in seperate template

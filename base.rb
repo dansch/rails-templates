@@ -12,6 +12,10 @@ config/database.yml
 db/*.sqlite3
 END
 
+# plugins
+plugin 'inherited_resources', :git => 'git://github.com/josevalim/inherited_resources.git'
+
+
 # gems
 gem 'authlogic', :source => "http://gemcutter.org"
 gem 'compass-960-plugin', :lib => 'ninesixty', :source => "http://gemcutter.org"
@@ -35,12 +39,11 @@ generate "rspec"
 generate "cucumber"
 
 # authlogic authentication
-generate "session", "user_session"
-generate "rspec_scaffold", "user login:string"
-
-# rake tasks
-rake "db:migrate"
-
+if yes?("Do you want to use authlogic?")
+  authlogic_model = ask("What do you want the authlogic_model to be called?")
+  generate "session", "#{authlogic_model}_session"
+  generate "rspec_scaffold", "#{authlogic_model}"
+end
 
 # Finally, git it!
 git :init
