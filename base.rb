@@ -12,9 +12,6 @@ config/database.yml
 db/*.sqlite3
 END
 
-# plugins
-plugin 'inherited_resources', :git => 'git://github.com/josevalim/inherited_resources.git'
-
 
 # gems
 gem 'authlogic', :source => "http://gemcutter.org"
@@ -24,6 +21,7 @@ gem 'formtastic', :source => "http://gemcutter.org"
 gem 'haml', :lib => 'haml', :version => '>=2.2.0', :source => "http://gemcutter.org"
 gem 'searchlogic', :source => "http://gemcutter.org"
 gem 'will_paginate', :source => "http://gemcutter.org"
+gem 'inherited_resources', :source => "http://gemcutter.org"
 
 # gems for testing
 gem "rspec", :lib => false, :version => ">=1.2.9"
