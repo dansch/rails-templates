@@ -1,11 +1,12 @@
 # file modification
 run "rm public/index.html"
 run "rm public/images/rails.png"
-run "cp config/database.yml config/example_database.yml"
+run "cp config/database.yml config/database.yml.example"
 run "touch tmp/.gitignore log/.gitignore vendor/.gitignore"
 
 # Ignore auto-generated files
 file ".gitignore", <<-END
+.DS_Store
 log/*.log
 tmp/**/*
 config/database.yml
