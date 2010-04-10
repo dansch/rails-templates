@@ -15,14 +15,13 @@ END
 
 
 # gems
-gem 'authlogic', :source => "http://gemcutter.org"
-gem 'compass-960-plugin', :lib => 'ninesixty', :source => "http://gemcutter.org"
-gem 'compass', :lib => 'compass', :source => "http://gemcutter.org"
-gem 'formtastic', :source => "http://gemcutter.org"
-gem 'haml', :lib => 'haml', :version => '>=2.2.0', :source => "http://gemcutter.org"
-gem 'searchlogic', :source => "http://gemcutter.org"
-gem 'will_paginate', :source => "http://gemcutter.org"
-gem 'inherited_resources', :source => "http://gemcutter.org"
+gem 'authlogic'
+gem 'compass-960-plugin', :lib => 'ninesixty'
+gem 'compass', :lib => 'compass'
+gem 'formtastic'
+gem 'haml', :lib => 'haml', :version => '>=2.2.0'
+gem 'will_paginate'
+gem 'inherited_resources'
 
 # gems for testing
 gem "rspec", :lib => false, :version => ">=1.2.9"
